@@ -4,13 +4,15 @@ class CreateTodo extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            todoText: ""
+            todoText: "",
+          
         };
     }
 
     handleChange = (event) => {
         this.setState({
-            todoText: event.target.value
+            todoText: event.target.value,
+       
         })
     }
 
@@ -28,6 +30,7 @@ class CreateTodo extends React.Component {
     render() {
         console.log("CreateTODO render function is running!");
         return (
+     
             <form onSubmit={this.handleSubmit}>
                 <input
                     type="text"
@@ -36,6 +39,7 @@ class CreateTodo extends React.Component {
                 />
                 <button type="submit">Add TODO</button>
             </form>
+           
         );
     }
 }

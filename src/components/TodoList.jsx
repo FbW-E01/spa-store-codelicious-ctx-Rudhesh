@@ -1,7 +1,9 @@
 import './TodoList.css'
 import TodoListItem from './TodoListItem';
 import CreateTodo from './CreateTodo';
-import { useState } from 'react';
+import { useState,useContext } from 'react';
+import { ThemeContext } from '../contexts/ThemeContext';
+
 
 const defaultTodos = [
     { id: 58477, user: 1, text: "Wash dishes", done: false },
@@ -11,6 +13,8 @@ const defaultTodos = [
 
 function TodoList() {
     const [todos, setTodos] = useState(defaultTodos);
+    const {theme, setTheme} = useContext(ThemeContext);
+
 
     function deleteTodo(todo) {
         const newTodos = todos.filter(f => f.id !== todo.id);
@@ -26,7 +30,7 @@ function TodoList() {
     console.log(todos);
 
     return (
-        <div className="todos">
+        <div className={`todos ${theme}`}>
             <CreateTodo createTodo={createTodo} />
             <ul>
                 {todos.map(todo =>

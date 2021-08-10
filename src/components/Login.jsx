@@ -11,7 +11,7 @@ function Login() {
     function doLogin(e) {
         e.preventDefault();
 
-        if (email !== "joel@example.org") {
+        if (email !== "twentylightyear@gmail.com") {
             alert("Invalid email");
             return;
         }

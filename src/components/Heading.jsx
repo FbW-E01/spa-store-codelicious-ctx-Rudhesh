@@ -1,9 +1,15 @@
 import { useContext } from "react";
 import { UserContext } from "../contexts/UserContext";
+import { ThemeContext } from "../contexts/ThemeContext";
+
+
 
 export default function Heading() {
-    const { user } = useContext(UserContext);
-
+    const { user, setUser } = useContext(UserContext);
+    const {theme, setTheme} = useContext(ThemeContext);
+    
+    
+    
     return (
         <div className="heading">
             <p>
@@ -12,7 +18,10 @@ export default function Heading() {
             </p>
             <hr/>
             <p>Switch theme</p>
-            <select>
+            <select onChange={(e)=> 
+            setTheme(e.target.value)
+            
+            } >
                 <option value="light">Light blue</option>
                 <option value="dark">Dark green</option>
             </select>

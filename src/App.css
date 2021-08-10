@@ -1,14 +1,20 @@
 .App {
-    margin: 2em auto;
-    width: 40vw;
-    min-width: 400px;
-    padding: 2em;
-    border: 0.1em solid black;
-    border-radius: 0.5em;
-    background: #fff;
-    overflow: hidden;
+  margin: 2em auto;
+  width: 40vw;
+  min-width: 400px;
+  padding: 2em;
+  border: 0.1em solid black;
+  border-radius: 0.5em;
+  background: rgb(255, 255, 255);
+  overflow: hidden;
 }
 
-.App > p, .App > h1 {
-    text-align: center;
+.dark {
+  background: rgb(2, 59, 0);
+  color: rgb(255, 255, 255);
+}
+
+.App > p,
+.App > h1 {
+  text-align: center;
 }
